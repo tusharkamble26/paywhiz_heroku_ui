@@ -1,0 +1,49 @@
+import { Injectable } from '@angular/core';
+import { Headers, Http,RequestOptions,Response } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RouterModule, Routes, Router } from '@angular/router';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs/Observable';
+ 
+import 'rxjs/add/operator/map';
+import {User} from './User';
+import {Purchase} from './Purchase';
+
+@Injectable()
+export class DataService{
+    
+    constructor(private httpClient:HttpClient){}
+
+    
+
+    create(user: User) {
+        return this.httpClient
+          .post("registration", user)
+          .subscribe(
+              (data:any) => {
+                console.log(data);
+                    
+              }
+
+          )
+          
+      }
+
+    /*
+    logIn(user: User): Observable<any>{
+        var show = false;
+        return this.httpClient
+          .post<User>("login", user)
+          .map(
+              (data:User)=> {
+                console.log(data);
+                //this.user2=data;
+                return data;
+              }
+          );
+              
+      }*/
+
+    
+}

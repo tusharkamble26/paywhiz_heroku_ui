@@ -1,0 +1,16 @@
+<!--div style="padding: 20px;">
+    <h2 style="color: blue">PayWhiz Customer Portal</h2>
+    <nav>
+        <a routerLink="login" class="btn btn-primary active" role="button" routerLinkActive="active">Customers</a>
+        <a routerLink="registration" class="btn btn-primary active" role="button" routerLinkActive="active">Register</a>
+        <a routerLink="purchase" class="btn btn-primary active" role="button" routerLinkActive="active">Purchase</a>
+        <a routerLink="refill" class="btn btn-primary active" role="button" routerLinkActive="active">Credit</a>
+    </nav>
+    <h1>Welcome {{user.username}}</h1>
+</div-->
+<!--router-outlet></router-outlet-->
+<div style="widows: 400px;">
+    <h2 style="color: blue">PayWhiz Customer Portal</h2>
+    <button class="btn btn-primary" (click)="goLogin()">Login</button>
+    <button class="btn btn-primary" (click)="goRegister()">Register</button>
+</div>

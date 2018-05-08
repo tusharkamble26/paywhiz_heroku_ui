@@ -1,0 +1,14 @@
+<h1 style="color: blue">PayWhiz Customer Portal</h1>
+<button class="btn btn-primary" (click)="goPurchase()" style="width: inherit">Purchase</button>
+<button class="btn btn-primary" (click)="goAnalyze()">Analyze</button>
+<button class="btn btn-primary" (click)="goLogout()">Logout</button>
+<h3>{{user.username}} : {{this.user.wallet}}</h3>
+<form (submit)="onSubmit()" style="width: 200px; padding-top: 30px;">
+    <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="user2.wallet" name="wallet" placeholder="Amount" />
+    </div>
+
+    <div class="btn btn-group">
+        <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+</form>

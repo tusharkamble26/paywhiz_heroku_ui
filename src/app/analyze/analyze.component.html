@@ -1,0 +1,14 @@
+<h1 style="color: blue">PayWhiz Customer Portal</h1>
+<!--h3>{{user.username}} {{this.user.wallet}}</h3-->
+<button class="btn btn-primary" (click)="goPurchase()">Purchase</button>
+<button class="btn btn-primary" (click)="goRefill()">Refill</button>
+<button class="btn btn-primary" (click)="goLogout()">Logout</button>
+
+<div>
+    <form (ngSubmit)="save()" style="padding-top: 30px; width: inherit">
+        <button class=" btn btn-success " type="submit " style="width: inherit">Analyze</button>
+        <div *ngIf="chart">
+            <canvas id="canvas">{{ chart }}</canvas>
+        </div>
+    </form>
+</div>

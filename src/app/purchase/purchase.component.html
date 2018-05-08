@@ -1,0 +1,24 @@
+<h1 style="color: blue">PayWhiz Customer Portal</h1>
+<button class="btn btn-primary" (click)="goAnalyze()">Analyze</button>
+<button class="btn btn-primary" (click)="goRefill()">Refill</button>
+<button class="btn btn-primary" (click)="goLogout()">Logout</button>
+
+<h3>{{user.username}} {{this.user.wallet}}</h3>
+<div id="purc">
+    <form (ngSubmit)="onSubmit()" style="width: 200px; padding-top: 30px;">
+        <div class="form-group">
+            <select class="form-control" id="category" required [(ngModel)]="purchase.category" name="category" style="width: inherit">
+                    <option *ngFor="let cat of categories" [value]="cat">{{cat}}</option>
+            </select>
+        </div>
+        <!--div class="form-group">
+            <input type="text" [(ngModel)]="purchase.category" placeholder="Category" name="category" />
+        </div-->
+        <div class="form-group">
+            <input type="text" [(ngModel)]="purchase.purchaseAmt" placeholder="Amount" name="purchaseAmt" />
+        </div>
+        <button id="purcButton" class="btn btn-success" type="submit">Submit</button>
+
+    </form>
+
+</div>

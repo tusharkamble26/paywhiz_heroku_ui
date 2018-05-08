@@ -1,0 +1,24 @@
+<h3>Customer Registration</h3>
+<div [hidden]="submitted" style="width: 300px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="text" class="form-control" id="username" required [(ngModel)]="user.username" name="username" aria-describedby="emailHelp" placeholder="Enter Username">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Password</label>
+            <input type="password" class="form-control" id="password" required [(ngModel)]="user.password" name="password" aria-describedby="emailHelp" placeholder="Enter Password">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Password Confirm</label>
+            <input type="password" class="form-control" id="passwordConfirm" required [(ngModel)]="user.passwordConfirm" name="passwordConfirm" aria-describedby="emailHelp" placeholder="Enter Password Again">
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-primary" (click)="goBack()">Back</button>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>
